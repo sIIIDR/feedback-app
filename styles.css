@@ -1,0 +1,110 @@
+#container 
+{
+	margin: auto;
+	border: 3px solid #bdbcbc;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.856);
+	width: 800px;
+}
+
+label
+{
+    font-family: corbel;
+    font-weight:bold;
+    margin-left: 280;
+    
+}
+
+body
+{
+    background-image: url(images/background-feedback-app.png);
+}
+
+input
+{
+   font-family: corbel;
+   font-weight:bold;
+   color: #292929;
+   border: solid 2px #bdbcbc;
+   margin-left: 280px;
+   padding: 4px;
+   width: 250;
+   border-radius: 12px;
+}
+
+button 
+{
+    font-family: corbel;
+    font-weight:bold;
+    margin-left: 320px;
+
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+    border: none;
+    color: #000;
+}
+
+button:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    direction: rtl;
+    z-index: -1;
+    box-shadow:
+     -7px -7px 20px 0px rgb(255, 255, 255),
+     -4px -4px 5px 0px rgb(255, 255, 255),
+     7px 7px 20px 0px rgb(0, 0, 0),
+     4px 4px 5px 0px rgba(0, 0, 0, 0.411);
+    transition: all 0.3s ease;
+}
+
+button:hover 
+{
+	color: #000;
+}
+
+button:hover::after
+{
+    left: auto;
+    right: 0;
+    width: 100%;
+}
+
+button:active
+{
+    top: 2px;
+}
+
+textarea
+{
+    display: block;
+    width: 250;
+    box-sizing: border-box;
+    resize: none;
+    font-family: corbel;
+    font-weight:bold;
+    border: solid 2px #bdbcbc;
+    color: #000000;
+    margin-left: 280px;
+    padding: 4px;
+    max-height: 300;
+
+}
+
+
+input:hover,textarea:hover
+{
+    border: solid 2px #bcf374;
+}
