@@ -2,7 +2,7 @@
     /* Парсинг данных и подготовка их к отправке. */
     $subject = "Вопрос(тестовое задние)";
 
-    $to = "kirill.sidorenkov.2003@yandex.ru";
+    $to = "join@ecwid.com";
     $name = $_POST['name'];
     $date = $_POST['date'];
     $number = $_POST['phone'];
