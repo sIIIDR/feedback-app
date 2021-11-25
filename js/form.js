@@ -1,3 +1,16 @@
+
+/* Добавление загрузочного экрана */
+document.addEventListener("DOMContentLoaded", function() {
+    const form = document.getElementById("form");
+
+    form.addEventListener("submit", formSend);
+
+    function formSend()
+    {
+        form.classList.add("_sending");
+    }
+})
+
 /*
 Эта функции фокусят курсос на начале формы номера, и помогают в заполнении полей номера.
 */
@@ -35,12 +48,3 @@ window.addEventListener("DOMContentLoaded", function() {
     input.focus();
     setCursorPosition(3, input);
 });
-
-/*
-Эта функция динамически расширяет textarea в длинну при увелечении длинны сообщения. По достижению 300px длинны,
-textarea перестаёт расширятся и просто добавляет скролл.
-*/
-document.querySelector('textarea').addEventListener('input', function (e) {
-    e.target.style.height = 'auto'
-    e.target.style.height = e.target.scrollHeight + 2 + "px"
-})

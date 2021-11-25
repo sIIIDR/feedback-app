@@ -1,44 +1,136 @@
-#container 
+/* Обнуление параметров */
+*,
+*::before,
+*::after
 {
-	margin: auto;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+ul,
+ol,
+li
+{
+    list-style: none;
+}
+
+img
+{
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+{
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+html,
+body
+{
+    max-height: 100%;
+    line-height: 1;
+    background-image:  url(images/background-feedback-app.png);
+}
+
+/*------------------------------------*/
+/*          Работа с формой           */
+/*------------------------------------*/
+
+*
+{
+    font-size: 14px;
+    font-family: corbel;
+    font-weight: bold;
+}
+
+
+
+.form
+{
+    max-width: 550px;
+    margin: 0px auto;
+    padding: 20px;
+}
+
+
+.form_body
+{
+    margin: 0px auto;
 	border: 3px solid #bdbcbc;
     border-radius: 12px;
     background-color: rgba(255, 255, 255, 0.856);
-	width: 800px;
+	max-width: 800px;
+    padding: 10px;
+    text-align: center;
+    position: relative;
 }
 
-label
+.form::after
 {
-    font-family: corbel;
-    font-weight:bold;
-    margin-left: 280;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(51, 51, 51, 0.9) url("images/load-gif.gif") center / 50px no-repeat;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease;
+}
     
+
+.form._sending::after
+{
+    opacity: 1;
+    visibility: visible;
 }
 
-body
+.form_label
 {
-    background-image: url(images/background-feedback-app.png);
+    padding: 5px;
+    display: block;
+    margin: 0px auto;
+}
+
+.form_item
+{
+    padding: 5px;
+    margin: 0px auto;
 }
 
 input
 {
-   font-family: corbel;
-   font-weight:bold;
-   color: #292929;
-   border: solid 2px #bdbcbc;
-   margin-left: 280px;
-   padding: 4px;
-   width: 250;
-   border-radius: 12px;
+    min-width: 50%;
+    height: 25px;
+    border: solid 2px #bdbcbc;
+    border-radius: 6px;
 }
 
-button 
+textarea
 {
-    font-family: corbel;
-    font-weight:bold;
-    margin-left: 320px;
+    border: solid 2px #bdbcbc;
+    min-width: 65%;
+    max-width: 100%;
+    padding: 4px;
+    
+}
 
-    color: #fff;
+.form_button
+{
     border-radius: 5px;
     padding: 10px 25px;
     cursor: pointer;
@@ -50,10 +142,10 @@ button
      4px 4px 5px 0px rgba(0,0,0,.1);
     outline: none;
     border: none;
-    color: #000;
+    color: rgba(0, 0, 0, 0.5);
 }
 
-button:after {
+.form_button:after {
     position: absolute;
     content: "";
     width: 0;
@@ -70,37 +162,23 @@ button:after {
     transition: all 0.3s ease;
 }
 
-button:hover 
+
+.form_button:hover 
 {
 	color: #000;
 }
 
-button:hover::after
+.form_button:hover::after
 {
-    left: auto;
-    right: 0;
-    width: 100%;
+    left: 200;
+    right: 100;
+    width: 200%;
 }
 
-button:active
+
+.form_button:active
 {
     top: 2px;
-}
-
-textarea
-{
-    display: block;
-    width: 250;
-    box-sizing: border-box;
-    resize: none;
-    font-family: corbel;
-    font-weight:bold;
-    border: solid 2px #bdbcbc;
-    color: #000000;
-    margin-left: 280px;
-    padding: 4px;
-    max-height: 300;
-
 }
 
 
