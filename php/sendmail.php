@@ -21,8 +21,22 @@
     /* Тут мы смотрим успешно ли отправилось письмо */
     if(mail($to, $subject, $message, $from))
     {
-        echo "Письмо отправлено!";
+        echo '
+        <style>
+        .info{
+        font-size: 35px; font-family: corbel; 
+        font-weight:bold; color: #292929; 
+        text-align: center;  padding: 30px;}
+        </style>
+        <div class="info">Письмо отправлено!</div>';
     } else {
-        echo "Письмо не отправлено.";
+        echo '
+        <style>
+        .info{
+        font-size: 35px; font-family: corbel; 
+        font-weight:bold; color: #292929; 
+        text-align: center;  padding: 30px;}
+        </style>
+        <div class="info">Письмо не отправлено.</div>';
     }
 ?>
