@@ -56,15 +56,12 @@ body
     font-weight: bold;
 }
 
-
-
 .form
 {
-    max-width: 550px;
+    max-width: 1200px;
     margin: 0px auto;
     padding: 20px;
 }
-
 
 .form_body
 {
@@ -76,6 +73,17 @@ body
     padding: 10px;
     text-align: center;
     position: relative;
+}
+@media (max-width:767px) {
+  input
+  {
+    min-width: 100%;
+  }
+  textarea
+  {
+    min-width: 100%;
+  }
+    
 }
 
 .form::after
@@ -90,8 +98,7 @@ body
     opacity: 0;
     visibility: hidden;
     transition: all 0.5s ease;
-}
-    
+} 
 
 .form._sending::after
 {
@@ -114,7 +121,7 @@ body
 
 input
 {
-    min-width: 50%;
+    max-width: 100%;
     height: 25px;
     border: solid 2px #bdbcbc;
     border-radius: 6px;
@@ -123,8 +130,7 @@ input
 textarea
 {
     border: solid 2px #bdbcbc;
-    min-width: 65%;
-    max-width: 100%;
+    max-width: 50%;
     padding: 4px;
     
 }
@@ -162,7 +168,6 @@ textarea
     transition: all 0.3s ease;
 }
 
-
 .form_button:hover 
 {
 	color: #000;
@@ -180,7 +185,6 @@ textarea
 {
     top: 2px;
 }
-
 
 input:hover,textarea:hover
 {

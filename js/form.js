@@ -1,3 +1,5 @@
+/* Добавление сегодняшней даты, как максимально возможной */
+datePickerId.max = new Date().toISOString().split("T")[0];
 
 /* Добавление загрузочного экрана */
 document.addEventListener("DOMContentLoaded", function() {
