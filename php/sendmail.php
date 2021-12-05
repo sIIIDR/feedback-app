@@ -18,7 +18,6 @@
     "$message_txt";
 
     /* Тут мы смотрим успешно ли отправилось письмо */
-    /*
     if(mail($to, $subject, $message, $from))
     {
         echo '
@@ -39,5 +38,4 @@
         </style>
         <div class="info">Письмо не отправлено.</div>';
     }
-    */
 ?>
